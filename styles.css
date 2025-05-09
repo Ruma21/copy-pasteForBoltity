@@ -1,0 +1,194 @@
+:root {
+  --primary: #6366F1;
+  --primary-hover: #4F46E5;
+  --success: #10B981;
+  --background: #F9FAFC;
+  --card-bg: #ffffff;
+  --text: #2A2D34;
+  --header: #1E293B;
+}
+
+body.dark-mode {
+  --background: #0F172A;
+  --card-bg: #1E1E2E;
+  --text: #E2E8F0;
+  --header: #6366F1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+header {
+  background-color: var(--header);
+  color: white;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  margin: 20px 10px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card h2 {
+  font-size: 18px;
+  color: var(--header);
+  margin: 0;
+}
+
+.flecha {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.card.open .flecha {
+  transform: rotate(180deg);
+}
+
+.mensaje {
+  max-height: 0;
+  overflow: hidden;
+  white-space: pre-line;
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 1.4;
+  transition: max-height 0.5s ease;
+}
+
+.card.open .mensaje {
+  max-height: 500px;
+}
+
+.card button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Botón flotante circular modo oscuro */
+#toggle-dark-mode {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+#toggle-dark-mode:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--success);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 26px;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+.logo-text {
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+}
+
+.subtitulo {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.card {
+  animation: fadeInUp 0.4s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

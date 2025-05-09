@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mensajes Boltity</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+        <div class="logo">
+            <span class="logo-icon">🚀</span>
+            <span class="logo-text">Boltity</span>
+          </div>
+          <h2 class="subtitulo">Mensajes por Nicho</h2>
+          
+    </header>
+
+    <main>
+      <section class="card" onclick="toggleTexto(this)">
+        <div class="header-flex">
+          <h2>📚 Escuelas Privadas</h2>
+          <span class="flecha">▼</span>
+        </div>
+        <div class="mensaje" id="msg1">
+            Hola, muy buenas tardes! Les escribo desde Boltity, donde ayudamos a instituciones educativas a digitalizar procesos como inscripciones, control de pagos, asistencia y más con soluciones web o apps a medida.
+
+            Si les interesa conocer una propuesta sin compromiso, estaré encantado de enviarles más detalles. ¡Estoy a sus órdenes ante cualquier duda!
+            
+            👉 Boltity.co
+        </div>
+        <button onclick="copiar(event, 'msg1')">📋 Copiar</button>
+      </section>
+
+      <section class="card" onclick="toggleTexto(this)">
+        <div class="header-flex">
+          <h2>🍽 Restaurantes / Cafeterías</h2>
+          <span class="flecha">▼</span>
+        </div>
+        <div class="mensaje" id="msg2">
+            ¡Hola, muy buenas tardes! Vi su negocio y pensé en ofrecerles algo útil: en Boltity desarrollamos apps y sitios web para pedidos online, menús digitales, reservas y automatización de procesos.
+
+            Si les interesa cotizar sin costo, ¡estaré feliz de ayudarles!
+            
+            📲 Quedo atento a su mensaje.
+            
+            👉 Boltity.com
+        </div>
+        <button onclick="copiar(event, 'msg2')">📋 Copiar</button>
+      </section>
+
+      <section class="card" onclick="toggleTexto(this)">
+        <div class="header-flex">
+          <h2>🏋️ Gimnasios / Centros de Entrenamiento</h2>
+          <span class="flecha">▼</span>
+        </div>
+        <div class="mensaje" id="msg3">
+            ¡Hola, muy buenas! Les escribo desde Boltity. Desarrollamos apps para que centros como el suyo puedan automatizar reservas, controlar membresías, control de accesps, pagos online y más.
+
+            Puedo enviarles una propuesta sin compromiso. ¡Espero podamos trabajar juntos!
+            
+            👉 Boltity.com
+        </div>
+        <button onclick="copiar(event, 'msg3')">📋 Copiar</button>
+      </section>
+
+      <section class="card" onclick="toggleTexto(this)">
+        <div class="header-flex">
+          <h2>🧑‍⚕️ Consultorios Médicos / Psicológicos</h2>
+          <span class="flecha">▼</span>
+        </div>
+        <div class="mensaje" id="msg4">
+            ¡Buenas tardes! Les escribe Miguel desde Boltity. Ayudamos a consultorios médicos y psicológicos a digitalizar la gestión de turnos, fichas y recordatorios a través de apps o plataformas web personalizadas.
+
+            Si quieren más info o una cotización gratuita, estaré encantado de responder.
+            
+            👉 Boltity.com
+        </div>
+        <button onclick="copiar(event, 'msg4')">📋 Copiar</button>
+      </section>
+
+      <section class="card" onclick="toggleTexto(this)">
+        <div class="header-flex">
+          <h2>🛒 Tiendas / Emprendimientos Locales</h2>
+          <span class="flecha">▼</span>
+        </div>
+        <div class="mensaje" id="msg5">
+            ¡Hola! Vi su emprendimiento y me pareció ideal para lo que ofrecemos en Boltity: desarrollo de tiendas online, sistemas de pedido automático y cobros digitales personalizados.
+
+            Si desean ver una propuesta sin compromiso, estaré feliz de compartirles ejemplos y costos estimados.
+            
+            👉 Boltity.com
+        </div>
+        <button onclick="copiar(event, 'msg5')">📋 Copiar</button>
+      </section>
+    </main>
+  </div>
+
+  <!-- Botón flotante modo oscuro -->
+  <button id="toggle-dark-mode" title="Cambiar modo">🌙</button>
+
+  <div id="toast" class="toast">Texto copiado</div>
+    <script src="script.js"></script>
+  
+</body>
+</html>
